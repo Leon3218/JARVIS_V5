@@ -208,7 +208,7 @@ fun JarvisApp() {
                             )
                         ) {
 
-                            textViewNomeDoCampo.text = "seu texto"
+                            textViewResultado.text = "seu texto"
                         }
                     }
                 }
