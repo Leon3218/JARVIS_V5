@@ -26,7 +26,11 @@ jobs:
         uses: android-actions/setup-android@v4
 
       - name: Build Debug APK
-        run: gradle assembleDebug
+
+        run: |
+          chmod +x gradlew 2>/dev/null || true
+          ./gradlew assembleDebug
+          
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
