@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style
-        name="Theme.JARVIS"
-        parent="android:style/Theme.Material.Light.NoActionBar">
-
-        <item name="android:fontFamily">sans</item>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar.Fullscreen">
+        <item name="android:windowBackground">#070B14</item>
+        <item name="android:colorForeground">#FFFFFF</item>
+        <item name="android:statusBarColor">#070B14</item>
+        <item name="android:navigationBarColor">#070B14</item>
         <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">#0A0E14</item>
-        <item name="android:navigationBarColor">#0A0E14</item>
-
+        <item name="android:windowContentOverlay">@null</item>
     </style>
-
 </resources>
