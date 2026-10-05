@@ -7,7 +7,7 @@
 
     <application
         android:label="JARVIS"
-        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
         android:allowBackup="false"
         android:supportsRtl="true">
         <activity
