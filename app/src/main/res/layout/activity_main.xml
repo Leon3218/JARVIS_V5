@@ -1,16 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="@color/jarvis_bg"
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/resultado"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-</LinearLayout>
+        <!-- HORA E DATA -->
+        <TextView
+            android:id="@+id/timeDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="--:--"
+            android:textSize="52sp"
+            android:textColor="@color/jarvis_text_primary"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/dateDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carregando data…"
+            android:textSize="16sp"
+            android:textColor="@color/jarvis_text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="J.A.R.V.I.S."
+            android:textSize="32sp"
+            android:textColor="@color/jarvis_accent"
+            android:gravity="center"
+            android:letterSpacing="0.2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SISTEMA • V5.1 • ATIVO"
+            android:textSize="12sp"
+            android:textColor="@color/jarvis_accent"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"
+            android:alpha="0.8"/>
+
+        <!-- STATUS -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="● INICIALIZANDO"
+            android:textSize="15sp"
+            android:textColor="@color/jarvis_accent"
+            android:padding="16dp"
+            android:background="@color/jarvis_card"/>
+
+        <TextView
+            android:id="@+id/networkInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verificando rede…"
+            android:textSize="14sp"
+            android:textColor="@color/jarvis_text_primary"
+            android:padding="16dp"
+            android:background="@color/jarvis_card"
+            android:layout_marginTop="10dp"/>
+
+        <!-- BOTÕES -->
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔄 ATUALIZAR REDE"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/jarvis_card"
+            android:textColor="@color/jarvis_accent"
+            android:padding="14dp"/>
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔍 PROCURAR DISPOSITIVOS"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/jarvis_card"
+            android:textColor="@color/jarvis_accent"
+            android:padding="14dp"/>
+
+        <Button
+            android:id="@+id/btnVoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎙 COMANDO DE VOZ"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/jarvis_card"
+            android:textColor="@color/jarvis_accent"
+            android:padding="14dp"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙ CONFIGURAÇÕES"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/jarvis_card"
+            android:textColor="@color/jarvis_accent"
+            android:padding="14dp"/>
+
+        <!-- ÁREA DE CONVERSA -->
+        <TextView
+            android:id="@+id/chatOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistema pronto.\nFale ou digite um comando.\n\nMemória e IA integradas ativas."
+            android:textSize="14sp"
+            android:textColor="@color/jarvis_text_secondary"
+            android:padding="16dp"
+            android:background="@color/jarvis_card"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="4dp"/>
+
+    </LinearLayout>
+</ScrollView>
