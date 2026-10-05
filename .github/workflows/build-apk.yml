@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout repository
@@ -30,7 +30,6 @@ jobs:
       run: |
         mkdir -p app/src/main/res/values app/src/main/res/layout
         
-        # Injeta o arquivo colors.xml
         cat << 'EOF' > app/src/main/res/values/colors.xml
         <?xml version="1.0" encoding="utf-8"?>
         <resources>
@@ -42,7 +41,6 @@ jobs:
         </resources>
         EOF
 
-        # Injeta o layout activity_main.xml seguro
         cat << 'EOF' > app/src/main/res/layout/activity_main.xml
         <?xml version="1.0" encoding="utf-8"?>
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
