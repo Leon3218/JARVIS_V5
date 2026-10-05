@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="jarvis_bg">#070B14</color>
-    <color name="jarvis_accent">#45D9FF</color>
-    <color name="jarvis_card">#0F1828</color>
-    <color name="jarvis_text_primary">#FFFFFF</color>
-    <color name="jarvis_text_secondary">#B4C8D6</color>
-    <color name="jarvis_green">#45FF9F</color>
-    <color name="jarvis_red">#FF4560</color>
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#121212</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#00E5FF</item>
+    </style>
+    
+    <style name="Theme.Jarvis" parent="AppTheme" />
 </resources>
