@@ -18,13 +18,12 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
 
     - name: Fix XML Resource Errors
       run: |
         mkdir -p app/src/main/res/values app/src/main/res/layout
         
-        # Cria colors.xml completo com todos os recursos que o projeto possa pedir
+        # Criar colors.xml com todas as cores necessárias
         cat << 'EOF' > app/src/main/res/values/colors.xml
         <?xml version="1.0" encoding="utf-8"?>
         <resources>
@@ -36,15 +35,7 @@ jobs:
         </resources>
         EOF
 
-        # Cria styles.xml basico
-        cat << 'EOF' > app/src/main/res/values/styles.xml
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
-            <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.NoActionBar" />
-        </resources>
-        EOF
-
-        # Sobrescreve o layout para um seguro sem dependencias ausentes
+        # Criar layout activity_main.xml basico
         cat << 'EOF' > app/src/main/res/layout/activity_main.xml
         <?xml version="1.0" encoding="utf-8"?>
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -61,11 +52,11 @@ jobs:
         </FrameLayout>
         EOF
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
 
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --stacktrace
+      run: gradle assembleDebug --stacktrace
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
